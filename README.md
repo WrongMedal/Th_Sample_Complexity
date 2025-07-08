@@ -22,3 +22,7 @@ Documentazione di Pytorch Lightning <br>
 Documentazione di Wandb<br>
 Understanding Machine Learning: From Theory to Algorithms (Shai Shalev-Shwartz et al.)<br>
 Note/Slide deck del corso "Applicazioni Informatiche del Machine Learning" del Prof. Silvestri
+
+### Dettagli da curare in programma
+- Gestione della generazione iniziale dei pesi
+- Grafici sulla relazione diretta tra sample size e test_accuracy/test_loss
