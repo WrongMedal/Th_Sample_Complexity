@@ -173,7 +173,6 @@ class MnistDataModule(pl.LightningDataModule):
 
 #@title Funzione utilitaria per esperimenti
 def run_experiment(seme, sample_size, layer, epochs, num_proj):
-    #Manca uso di sample_size nel data loader
     torch.manual_seed(seme)
     mnist_dm = MnistDataModule(seme, num_samples=sample_size)
     L = 2*layer
