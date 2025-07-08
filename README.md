@@ -1,4 +1,4 @@
-# Tesi Graziosi WiP
+# Tesi sample complexity WiP
 
 Codice inerente al lavoro di tesi su sample complexity di tre FNN. <br>
 ⚠️ Tutto il materiale caricato è ancora un Work in Progress ⚠️
