@@ -203,17 +203,14 @@ def run_experiment(seme, sample_size, layer, epochs, num_proj):
     trainer.test(model=reteA, datamodule=mnist_dm)
     wandb.finish()
 
-#@title Params Exp0
+#@title Params Expn
+"""
+num_proj = #numero dell'esperimento
+epochs = #epoche richieste
 semi = (0, 1, 42)
-layers = (16, 32, 64)
-sample_size = [200, 8500, 55000]
-
-#@title Params Exp1
-num_proj = 1
-epochs = 15
-semi = (0, 1, 42)
-layers = (8, 16, 32, 64, 128)
-sample_size = [500, 8500, 30000, 55000]
+layers = #tupla dei layer per rete
+sample_size = #lista dei sample size (<= 550000)
+"""
 
 #@title Esperimenti
 for seme in semi:
