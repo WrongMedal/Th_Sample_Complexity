@@ -40,7 +40,7 @@ import wandb
 from pytorch_lightning.loggers import WandbLogger
 wandb.login()
 
-#@title Feedforward Neural Network A
+#@title Feedforward Neural Network B
 class FNN_B(pl.LightningModule):
 #Rete con primo layer con pesi NON allenabili, temp indica le dimensioni di questo primo layer
     def __init__(self, temp, hidd_layers_dim, seme):
