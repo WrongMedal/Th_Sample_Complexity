@@ -4,6 +4,9 @@ Codice inerente al lavoro di tesi su sample complexity di tre FNN. <br>
 ⚠️ Tutto il materiale caricato è ancora un Work in Progress ⚠️
 
 ### News
+_14 luglio_ <br>
+Modifica al codice della rete B per inizializzazione Xavier dei pesi del layer non addestrabile. Riscontrato (offline) significativo miglioramento in questo modo.
+
 _9 luglio_ <br>
 Caricati grafici dei primi due esperimenti con codice e note ausiliarie. <br>
 Questi primi due esperimenti servono per prendere una mira più accurata prima di produrne altri con parametri più rilevanti per la successiva analisi.<br>
@@ -30,7 +33,9 @@ introdotti nel codice per gli specifici obiettivi di questo progetto:
 Documentazione di Pytorch Lightning <br>
 Documentazione di Wandb<br>
 Understanding Machine Learning: From Theory to Algorithms (Shai Shalev-Shwartz et al.)<br>
-Note/Slide deck del corso "Applicazioni Informatiche del Machine Learning" del Prof. Silvestri
+Deep Learning (Ian Goodfellow et al.) <br>
+Note/Slide deck del corso "Applicazioni Informatiche del Machine Learning" @ Sapienza del Prof. Silvestri
 
 ### Nei prossimi episodi
-- Gestione della generazione iniziale dei pesi da parte di lightning, se possibile, scelta di una distribuzione fissa. 
+- Esperimento numero 3 con grafici
+- Considerazioni e migliorie tramite Margin Based Bounds 
