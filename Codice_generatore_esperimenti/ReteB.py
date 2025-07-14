@@ -68,6 +68,11 @@ class FNN_B(pl.LightningModule):
 
         layers.append(nn.Linear(temp, output_size))
         self.model = nn.Sequential(*layers)
+        self._init_weights()
+
+    #Inizializzazione metodo Xavier dei pesi del layer non addestrabile
+    def _init_weights(self):
+        nn.init.xavier_uniform_(self.backbone.weight)
 
 
     def forward(self, x):
