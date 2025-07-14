@@ -74,7 +74,6 @@ class FNN_B(pl.LightningModule):
     def _init_weights(self):
         nn.init.xavier_uniform_(self.backbone.weight)
 
-
     def forward(self, x):
         return self.model(x)
 
@@ -178,7 +177,7 @@ class MnistDataModule(pl.LightningDataModule):
 
 #@title Funzione utilitaria per esperimenti
 def run_experiment(seme, sample_size, layer, epochs, num_proj):
-    torch.manual_seed(seme)
+    pl.seed_everything(seme, workers=True)
     mnist_dm = MnistDataModule(seme, num_samples=sample_size)
     L = 2*layer
     reteB = FNN_B(L, (layer, layer, layer), seme)
