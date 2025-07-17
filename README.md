@@ -28,6 +28,32 @@ introdotti nel codice per gli specifici obiettivi di questo progetto:
     pandas
     wandb
 
+### Struttura delle reti
+Nel terzo esperimento _n_ è scelto da _(8, 16, 32, 64, 128, 256, 512)_ <br> 
+Rete A:
+| Input Layer | 1st Hidden Layer | 2nd Hidden Layer | 3rd Hidden Layer | Output Layer |
+|-------------|------------------|------------------|------------------|--------------|
+| 28×28       | n                | n                | n                | 10           |
+
+Rete B & C:
+
+| Input Layer | 1st Hidden Layer | 2nd Hidden Layer | 3rd Hidden Layer | 4th Hidden Layer | Output Layer |
+|-------------|------------------|------------------|------------------|------------------|--------------|
+| 28×28       | n                | n                | n                | n                | 10           |
+
+La differenza tra B e C sta tra Input Layer e 1st Hidden Layer. I pesi tra questi due layer non sono allenabili, una volta inizializzati restano fissi, la backpropagation non ha effetto su di loro.
+<br>
+
+### Inizializzazione & Ottimizzatore delle reti
+L'inizializzazione delle reti A e C è quella di default di Pytorch Lightning:
+<pre> weight ~ U(−√(1 / in_features), √(1 / in_features)) </pre>
+Dove U è distribuzione uniforme. <br>
+Source: https://github.com/pytorch/pytorch/blob/main/torch/nn/modules/linear.py <br>
+Per la rete B è stata scelta una inizializzazione **esclusivamente** sui pesi non addestrabili. <br>
+Questa inizializzazione è quella Xavier/Glorot su distribuzione uniforme:
+<pre> weight ~ U(−√(6 / (in_features + out_features)), √(6 / (in_features + out_features))) </pre>
+
+L'ottimizzatore usato è SGD.
 
 ### Source esterne
 Documentazione di Pytorch Lightning <br>
