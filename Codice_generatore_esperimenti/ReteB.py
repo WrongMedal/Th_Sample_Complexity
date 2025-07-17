@@ -179,7 +179,7 @@ class MnistDataModule(pl.LightningDataModule):
 def run_experiment(seme, sample_size, layer, epochs, num_proj):
     pl.seed_everything(seme, workers=True)
     mnist_dm = MnistDataModule(seme, num_samples=sample_size)
-    L = 2*layer
+    L = layer
     reteB = FNN_B(L, (layer, layer, layer), seme)
     wandb_logger = WandbLogger(
     project=f"Exp_{num_proj} Rete B",
