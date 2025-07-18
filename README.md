@@ -5,7 +5,7 @@ Codice inerente al lavoro di tesi su sample complexity di tre FNN. <br>
 
 ### News
 _18 luglio_ <br>
-Carimento dei CSV e dei grafici del terozo esperimento. Modificato il codice per generare i grafici per visualizzare la std. dev. delle reti.
+Caricamento dei CSV e dei grafici del terzo esperimento. Modificato il codice per generare i grafici per visualizzare la std. dev.
 
 _14 luglio_ <br>
 Modifica al codice della rete B per inizializzazione Xavier dei pesi del layer non addestrabile. Riscontrato (offline) significativo miglioramento in questo modo.
