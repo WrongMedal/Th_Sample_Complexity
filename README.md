@@ -4,6 +4,9 @@ Codice inerente al lavoro di tesi su sample complexity di tre FNN. <br>
 ⚠️ Tutto il materiale caricato è ancora un Work in Progress ⚠️
 
 ### News
+_29 luglio_ <br>
+Osservazioni e commenti sui grafici [Cartella Grafici_Risultati]. Descrizione dei risultati e possibili prossimi sviluppi di studio.
+
 _18 luglio_ <br>
 Caricamento dei CSV e dei grafici del terzo esperimento. Modificato il codice per generare i grafici per visualizzare la std. dev.
 
@@ -66,5 +69,5 @@ Deep Learning (Ian Goodfellow et al.) <br>
 Note/Slide deck del corso "Applicazioni Informatiche del Machine Learning" @ Sapienza del Prof. Silvestri
 
 ### Nei prossimi episodi
-- Esperimento numero 3 con grafici
-- Considerazioni e migliorie tramite Margin Based Bounds 
+- Addestramento layer_1024 con osservazioni
+- Analisi complessità spettrale 
