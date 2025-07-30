@@ -1,3 +1,5 @@
+##Exp3 - Exp4
+
 ### Dati rilevati - Rete A
 | Size Hidden Layer | Parametri allenabili | Parametri NON allenabili |
 |-------------------|----------------------|---------------------------|
