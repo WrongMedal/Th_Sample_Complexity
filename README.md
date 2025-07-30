@@ -4,6 +4,9 @@ Codice inerente al lavoro di tesi su sample complexity di tre FNN. <br>
 ⚠️ Tutto il materiale caricato è ancora un Work in Progress ⚠️
 
 ### News
+_30 luglio_ <br>
+Grafici architettura delle reti. Addestramento di layer_1024.
+
 _29 luglio_ <br>
 Osservazioni e commenti sui grafici [Cartella Grafici_Risultati]. Descrizione dei risultati e possibili prossimi sviluppi di studio.
 
@@ -36,18 +39,31 @@ introdotti nel codice per gli specifici obiettivi di questo progetto:
 
 ### Struttura delle reti
 Nel terzo esperimento _n_ è scelto da _(8, 16, 32, 64, 128, 256, 512)_ <br> 
-Rete A:
+Struttura dimensionale rete A
 | Input Layer | 1st Hidden Layer | 2nd Hidden Layer | 3rd Hidden Layer | Output Layer |
 |-------------|------------------|------------------|------------------|--------------|
 | 28×28       | n                | n                | n                | 10           |
 
-Rete B & C:
+_[Details] <br>
+Rete A - Fully connected - Tutti i pesi allenabili_
 
+![Rete A](https://github.com/WrongMedal/Th_Sample_Complexity/blob/main/Codice_generatore_esperimenti/ReteA.drawio.png)
+
+Struttura dimensionale reti B & C:
 | Input Layer | 1st Hidden Layer | 2nd Hidden Layer | 3rd Hidden Layer | 4th Hidden Layer | Output Layer |
 |-------------|------------------|------------------|------------------|------------------|--------------|
 | 28×28       | n                | n                | n                | n                | 10           |
 
-La differenza tra B e C sta tra Input Layer e 1st Hidden Layer. I pesi tra questi due layer non sono allenabili, una volta inizializzati restano fissi, la backpropagation non ha effetto su di loro.
+_[Details] <br>
+Rete B - Fully connected - Pesi del primo hidden layer NON allenabili (una volta inizializzati restano fissi, la backpropagation non ha effetto su di loro)_
+
+![Rete B](https://github.com/WrongMedal/Th_Sample_Complexity/blob/main/Codice_generatore_esperimenti/ReteB.drawio.png)
+
+_[Details] <br>
+Rete C - Fully connected - Tutti i pesi allenabili_
+
+![Rete C](https://github.com/WrongMedal/Th_Sample_Complexity/blob/main/Codice_generatore_esperimenti/ReteC.drawio.png)
+
 <br>
 
 ### Inizializzazione & Ottimizzatore delle reti
