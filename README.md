@@ -5,7 +5,7 @@ Codice inerente al lavoro di tesi su sample complexity di tre FNN. <br>
 
 ### News
 _30 luglio_ <br>
-Grafici architettura delle reti. Addestramento di layer_1024.
+Grafici architettura delle reti. Esperimento 4 (ovvero Exp3 + Layer_critico 1024).
 
 _29 luglio_ <br>
 Osservazioni e commenti sui grafici [Cartella Grafici_Risultati]. Descrizione dei risultati e possibili prossimi sviluppi di studio.
