@@ -9,6 +9,12 @@ Il codice qui presente funziona con la nomenclatura/struttura adottata nel mio d
     layers = (8, 16, 32, 64, 128, 256, 512)
     sample_size = (8000, 12000, 25000, 32000, 40000, 47000, 55000)
 
+### Exp4 Details
+    epochs = 20
+    semi = (0, 1, 42)
+    layers = (8, 16, 32, 64, 128, 256, 512, 1024)
+    sample_size = (8000, 12000, 25000, 32000, 40000, 47000, 55000)
+
 Ogni linea del plot è ottenuta mediando sui tre seed. <br> 
 Le linee tratteggiate indicano la deviazione standard. <br>
 L'accuracy e loss di riferimento sono quelle ottenute dal test, fatto esclusivamente a fine training e non epoca per epoca.
