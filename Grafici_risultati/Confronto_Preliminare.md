@@ -1,4 +1,4 @@
-##Exp3 - Exp4
+## Info Generali
 
 ### Dati rilevati - Rete A
 | Size Hidden Layer | Parametri allenabili | Parametri NON allenabili |
@@ -78,9 +78,10 @@ $$
 dove $|E|$ è il **numero di archi (parametri)** nella rete, anche se proprio come per le ipotesi del thm. precedente ci sono dei caviat su loss e altri dettagli implementativi. Comunque è questa la complessità che si imputa ad una rete neurale classicamente. Vediamo se rispecchia i risultati degli esperimenti.
 
 La VC-dimension è **proporzionale al numero di archi**, con una costante moltiplicativa logaritmica. Tuttavia, otteniamo **buona accuratezza anche con molte meno risorse** rispetto a questi valori.
-<br>
 
-Inoltre confrontando l'andamento del numero di parametri addestrabili:
+## Exp3
+
+Confrontando l'andamento del numero di parametri addestrabili:
 
 | Layers | Parametri addestrabili (B) | Parametri non addestrabili (B) | % addestrabili su tot (B) | Parametri addestrabili (A) | Differenza A - B |
 |--------|-----------------------------|----------------------------------|----------------------------|------------------------------|------------------|
@@ -109,4 +110,18 @@ Prevalesse la prima ipotesi si potrebbe concludere che la sample complexity dipe
 
 Nel secondo caso invece la conclusione è opposta: l'apprendibilità di una classe non prescinde da un preprocessing, da una predigestione delle informazioni anche con mezzi deterministici o che non variano nel training, ma anzi ne è influenzata anche in maniera variabile. Diventa allora interessante provare varie inizializzazioni dei parametri.
 
-La mia intuizione è che entrambe le conclusioni sia valide, e che tutti e tre i fattori concorrano a modificare l'espressività e quindi la sample complexity di una classe.
+La mia intuizione è che entrambe le conclusioni siano valide, e che tutti e tre i fattori concorrano a modificare l'espressività e quindi la sample complexity di una classe.
+
+----------------------------------------------------------------------
+
+## Exp4
+![ReteA VS ReteB - Accuracy](https://github.com/WrongMedal/Th_Sample_Complexity/blob/main/Grafici_risultati/Exp4_ReteA_VS_ReteB.png)
+
+Confrontando direttamente l'accuracy delle reti A e B, si nota uno scarto minore all'aumentare di layer **e** samples, a partire dal size_25000.<br>
+Tornando al discorso layer_1024: effettivamente possiamo vedere come la rete B superi l'accuracy di A, sebbene non di molto. Vale allora la pena ritestare su datset più difficili, su più epoche. E 
+
+![ReteC VS ReteB - Accuracy](https://github.com/WrongMedal/Th_Sample_Complexity/blob/main/Grafici_risultati/Exp4_ReteC_VS_ReteB.png)
+
+Viceversa confrontando la rete B con la rete C.
+
+Per architettura la rete B si colloca tra la A e la C e le sue perfomance rispecchiano ciò. L'aumentare del numero di layers, di parametri allenabili, della sample size e una strategica inizializzazione la fanno "avvicinare" alle rete A. Non è però chiaro quale di questi fattori sia quello determinante e che caratterizza la velocità con cui si avvicina ad A. 
