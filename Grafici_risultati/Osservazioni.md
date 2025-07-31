@@ -1,6 +1,6 @@
 ## Info Generali
 
-### Dati rilevati - Rete A
+### Dati rilevati - Rete A 
 | Size Hidden Layer | Parametri allenabili | Parametri NON allenabili |
 |-------------------|----------------------|---------------------------|
 | 8                 | 6480 — 6.5K          | 0                         |
@@ -96,29 +96,37 @@ Confrontando l'andamento del numero di parametri addestrabili:
 
 si nota una correlazione tra l'aumento dei pesi allenabili di B e la crescita dell'accuracy.
 
-Sapendo ciò e notando che nel caso layer_512, nonostante la differenza del numero di parametri sia sostanziale tra le due reti (A e B), le performance sono molto simili, si possono formulare queste due ipotesi:
-* o l'accuracy è ormai alta, potremmo star andando incontro a saturazione. Quindi influenza molto di più la quantità di informazioni dello specifico dataset che la struttura della rete.
-* oppure le due perfomance si avvicinano grazie al contributo dei pesi non addestrabili di B.
+Inoltre possiamo osservare che nel caso layer_512 le performance sono molto simili nonostante la differenza del numero di parametri sia sostanziale tra le reti A e B, le performance sono molto simili. 
+
+![Exp3  Rete A Accuracy/Loss on sample_size](https://github.com/WrongMedal/Th_Sample_Complexity/blob/main/Grafici_risultati/Exp3_ReteA_Accuracy_Loss.png)
+
+![Exp3 Rete B Accuracy/Loss on sample_size](https://github.com/WrongMedal/Th_Sample_Complexity/blob/main/Grafici_risultati/Exp3_ReteB_Accuracy_Loss.png)
+
+Date le precedenti considerazioni si possono formulare queste ipotesi:
+* l'accuracy è ormai alta, potremmo star andando incontro a saturazione: l'espressività di una rete è più influenzata dalla quantità di informazioni dello specifico dataset piuttosto che dalla sua architettura.
+* le due perfomance si avvicinano grazie al contributo dei pesi non addestrabili di B.
 
 Per discriminare tra le due (potrebbero anche essere entrambe valide) si possono fare le seguenti cose:
 * verificare se un dataset più complesso (es: Cifar10 o Cifar100) conduca a conclusioni diverse.
-* analizzare il caso critico layer_1024
+* analizzare il caso critico layer_1024.
 
 Il caso layer_1024 è critico per due motivi: è il primo momento in cui la rete B ha più parametri allenabili di A, inoltre è l'unico caso non presente nel grafico (ancora da addestrare).
 
-Prevalesse la prima ipotesi si potrebbe concludere che la sample complexity dipenda da esclusivamente dai parametri che possono variare durante il training e non da quelli che una volta scelti restano fissi. Piuttosto ha maggiore impatto il dataset stesso, ovvero la distribuzione di partenza. Il che è in realtà rispecchiato in letteratura dalla Rademacher complexity.
+Vi sono già degli approcci e misure che tengono in conto della prima ipotesi nella letteratura scientifica, si tratta della Rademacher complexity. Questa teoria infatti valuta la sample complexity di una classe nell'ottica della distribuzione (dataset) su cui è allenata.
 
-Nel secondo caso invece la conclusione è opposta: l'apprendibilità di una classe non prescinde da un preprocessing, da una predigestione delle informazioni anche con mezzi deterministici o che non variano nel training, ma anzi ne è influenzata anche in maniera variabile. Diventa allora interessante provare varie inizializzazioni dei parametri.
+Invece la seconda ipotesi è sostenuta, parzialmente, da prove empiriche ed euristiche circa l'inizializzazione dei pesi (v. cap. 8 di Deep Learning - Ian Goodfellow et al.). In questo senso è allora interessante provare altre inizializzazioni senza prevedere addestramento.
 
-La mia intuizione è che entrambe le conclusioni siano valide, e che tutti e tre i fattori concorrano a modificare l'espressività e quindi la sample complexity di una classe.
+La mia intuizione è che entrambe siano valide, che tutti questi i fattori concorrano (magari in misura diversa) a modificare l'espressività e quindi la sample complexity di una classe.
 
 ----------------------------------------------------------------------
 
-## Exp4
+## Exp4 
+Ovvero l'introduzione di layer_1024 in Exp3
+
 ![ReteA VS ReteB - Accuracy](https://github.com/WrongMedal/Th_Sample_Complexity/blob/main/Grafici_risultati/Exp4_ReteA_VS_ReteB.png)
 
 Confrontando direttamente l'accuracy delle reti A e B, si nota uno scarto minore all'aumentare di layer **e** samples, a partire dal size_25000.<br>
-Tornando al discorso layer_1024: effettivamente possiamo vedere come la rete B superi l'accuracy di A, sebbene non di molto. Vale allora la pena ritestare su datset più difficili, su più epoche. E 
+Tornando al discorso layer_1024: effettivamente possiamo vedere come la rete B superi l'accuracy di A, sebbene non di molto. Vale allora la pena usare datset di addestramento più difficili per verificare se questo salto avvenga sempre in prossimità di layer_1024, anche prima di raggiungere livelli di accuracy alti, per escludere l'influenza dei pesi non addestrabili. 
 
 ![ReteC VS ReteB - Accuracy](https://github.com/WrongMedal/Th_Sample_Complexity/blob/main/Grafici_risultati/Exp4_ReteC_VS_ReteB.png)
 
