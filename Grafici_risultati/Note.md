@@ -16,5 +16,5 @@ Il codice qui presente funziona con la nomenclatura/struttura adottata nel mio d
     sample_size = (8000, 12000, 25000, 32000, 40000, 47000, 55000)
 
 Ogni linea del plot è ottenuta mediando sui tre seed. <br> 
-Le linee tratteggiate indicano la deviazione standard. <br>
+Nei grafici ExpN_ReteX_Accuracy_Loss le linee tratteggiate indicano la deviazione standard. <br>
 L'accuracy e loss di riferimento sono quelle ottenute dal test, fatto esclusivamente a fine training e non epoca per epoca.
