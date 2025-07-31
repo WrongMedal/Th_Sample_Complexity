@@ -5,10 +5,12 @@ Codice inerente al lavoro di tesi su sample complexity di tre FNN. <br>
 
 ### News
 _30 luglio_ <br>
-Grafici architettura delle reti. Esperimento 4 (ovvero Exp3 + Layer_critico 1024) con osservazioni e analisi.
+introduzione dei grafici sull'architettura delle reti in questo README. <br>
+Esperimento 4 (ovvero Exp3 + Layer_critico 1024) con osservazioni e analisi [sempre qui](https://github.com/WrongMedal/Th_Sample_Complexity/blob/main/Grafici_risultati/Osservazioni.md)
+.
 
 _29 luglio_ <br>
-Osservazioni e commenti sui grafici [Cartella Grafici_Risultati]. Descrizione dei risultati e possibili prossimi sviluppi di studio.
+Osservazioni e commenti sui grafici [in questo file](https://github.com/WrongMedal/Th_Sample_Complexity/blob/main/Grafici_risultati/Osservazioni.md).
 
 _18 luglio_ <br>
 Caricamento dei CSV e dei grafici del terzo esperimento. Modificato il codice per generare i grafici per visualizzare la std. dev.
@@ -21,8 +23,7 @@ Caricati grafici dei primi due esperimenti con codice e note ausiliarie. <br>
 Questi primi due esperimenti servono per prendere una mira più accurata prima di produrne altri con parametri più rilevanti per la successiva analisi.<br>
 
 _8 luglio_ <br>
-Aggiunti tre colab: ciascuno genera esperimenti al variare della profondità, grandezza di sample, seed di 3 reti neurali (A,B,C). <br>
-La rete A e C sono della stessa tipologia, la C ha solo un hidden layer in più. La B si colloca a metà in quanto ha un layer in più di A ma questo non è allenabile.
+Aggiunti tre colab: ciascuno genera esperimenti al variare della profondità, grandezza di sample, seed di 3 reti neurali (A,B,C).
 
 ### Librerie & Pacchetti
 Il file **_requirements.txt_** è stato autogenerato dal Colab della Rete A, quindi può includere anche dei pacchetti non utilizzati. I seguenti sono quelli, in generale, 
