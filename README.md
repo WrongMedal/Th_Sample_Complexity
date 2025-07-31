@@ -5,7 +5,7 @@ Codice inerente al lavoro di tesi su sample complexity di tre FNN. <br>
 
 ### News
 _30 luglio_ <br>
-Grafici architettura delle reti. Esperimento 4 (ovvero Exp3 + Layer_critico 1024).
+Grafici architettura delle reti. Esperimento 4 (ovvero Exp3 + Layer_critico 1024) con osservazioni e analisi.
 
 _29 luglio_ <br>
 Osservazioni e commenti sui grafici [Cartella Grafici_Risultati]. Descrizione dei risultati e possibili prossimi sviluppi di studio.
@@ -85,5 +85,6 @@ Deep Learning (Ian Goodfellow et al.) <br>
 Note/Slide deck del corso "Applicazioni Informatiche del Machine Learning" @ Sapienza del Prof. Silvestri
 
 ### Nei prossimi episodi
-- Addestramento layer_1024 con osservazioni
-- Analisi complessità spettrale 
+- Analisi spettrale delle reti
+- Test su diverse inizializzazioni
+- Test su diverso criterio di arresto in allenamento 
