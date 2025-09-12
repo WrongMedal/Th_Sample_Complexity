@@ -5,7 +5,7 @@ Codice inerente al lavoro di tesi su sample complexity di tre FNN. <br>
 
 ### News
 _30 luglio_ <br>
-introduzione dei grafici sull'architettura delle reti in questo README. <br>
+Grafici sull'architettura delle reti in questo README. <br>
 Esperimento 4 (ovvero Exp3 + Layer_critico 1024) con osservazioni e analisi [sempre qui](https://github.com/WrongMedal/Th_Sample_Complexity/blob/main/Grafici_risultati/Osservazioni.md)
 .
 
@@ -39,14 +39,14 @@ introdotti nel codice per gli specifici obiettivi di questo progetto:
     wandb
 
 ### Struttura delle reti
-Nel terzo esperimento _n_ è scelto da _(8, 16, 32, 64, 128, 256, 512)_ <br> 
+Nei vari esperimenti _n_ è scelto da _(8, 16, 32, 64, 128, 256, 512, 1024)_ <br> 
 Struttura dimensionale rete A
 | Input Layer | 1st Hidden Layer | 2nd Hidden Layer | 3rd Hidden Layer | Output Layer |
 |-------------|------------------|------------------|------------------|--------------|
 | 28×28       | n                | n                | n                | 10           |
 
 _[Details] <br>
-Rete A - Fully connected - Tutti i pesi allenabili_
+**Rete A** - Fully connected - Tutti i pesi allenabili_
 
 ![Rete A](https://github.com/WrongMedal/Th_Sample_Complexity/blob/main/Codice_generatore_esperimenti/ReteA.drawio.png)
 
@@ -56,27 +56,28 @@ Struttura dimensionale reti B & C:
 | 28×28       | n                | n                | n                | n                | 10           |
 
 _[Details] <br>
-Rete B - Fully connected - Pesi del primo hidden layer NON allenabili (una volta inizializzati restano fissi, la backpropagation non ha effetto su di loro)_
+**Rete B** - Fully connected - Pesi del primo hidden layer NON allenabili (una volta inizializzati restano fissi, la backpropagation non ha effetto su di loro)_
 
 ![Rete B](https://github.com/WrongMedal/Th_Sample_Complexity/blob/main/Codice_generatore_esperimenti/ReteB.drawio.png)
 
 _[Details] <br>
-Rete C - Fully connected - Tutti i pesi allenabili_
+**Rete C** - Fully connected - Tutti i pesi allenabili_
 
 ![Rete C](https://github.com/WrongMedal/Th_Sample_Complexity/blob/main/Codice_generatore_esperimenti/ReteC.drawio.png)
 
 <br>
 
-### Inizializzazione & Ottimizzatore delle reti
+### Inizializzazione & Ottimizzatore
 L'inizializzazione delle reti A e C è quella di default di Pytorch Lightning:
 <pre> weight ~ U(−√(1 / in_features), √(1 / in_features)) </pre>
 Dove U è distribuzione uniforme. <br>
-Source: https://github.com/pytorch/pytorch/blob/main/torch/nn/modules/linear.py <br>
-Per la rete B è stata scelta una inizializzazione **esclusivamente** sui pesi non addestrabili. <br>
+Source: https://github.com/pytorch/pytorch/blob/main/torch/nn/modules/linear.py <br> <br>
+Per la rete B è stata scelta una inizializzazione diversa **esclusivamente sui pesi non addestrabili**. <br>
 Questa inizializzazione è quella Xavier/Glorot su distribuzione uniforme:
 <pre> weight ~ U(−√(6 / (in_features + out_features)), √(6 / (in_features + out_features))) </pre>
+I successivi layers della rete B (per essere comparabile con A) utilizza l'inizializzazione di default di Pytorch Lightning.
 
-L'ottimizzatore usato è SGD.
+L'ottimizzatore usato è SGD con learning rate 0.001.
 
 ### Source esterne
 Documentazione di Pytorch Lightning <br>
@@ -86,6 +87,6 @@ Deep Learning (Ian Goodfellow et al.) <br>
 Note/Slide deck del corso "Applicazioni Informatiche del Machine Learning" @ Sapienza del Prof. Silvestri
 
 ### Nei prossimi episodi
-- Analisi spettrale delle reti
-- Test su diverse inizializzazioni
-- Test su diverso criterio di arresto in allenamento 
+- Aggiornamento grafici con migliorie sulla legenda
+- Test su diverso criterio di arresto in allenamento
+- Test su diverse inizializzazioni 
