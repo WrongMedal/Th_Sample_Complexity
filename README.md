@@ -4,6 +4,10 @@ Codice inerente al lavoro di tesi su sample complexity di tre FNN. <br>
 ⚠️ Tutto il materiale caricato è ancora un Work in Progress ⚠️
 
 ### News
+_25 luglio_ <br>
+Introduzione grafici e CSV Esperimento 5 (early stopping). <br>
+Caricati CSV, per ogni esperimento, che analizzano il rango delle matrici dei layer delle varie reti.
+
 _30 luglio_ <br>
 Grafici sull'architettura delle reti in questo README. <br>
 Esperimento 4 (ovvero Exp3 + Layer_critico 1024) con osservazioni e analisi [sempre qui](https://github.com/WrongMedal/Th_Sample_Complexity/blob/main/Grafici_risultati/Osservazioni.md)
@@ -87,6 +91,5 @@ Deep Learning (Ian Goodfellow et al.) <br>
 Note/Slide deck del corso "Applicazioni Informatiche del Machine Learning" @ Sapienza del Prof. Silvestri
 
 ### Nei prossimi episodi
-- Aggiornamento grafici con migliorie sulla legenda
-- Test su diverso criterio di arresto in allenamento
-- Test su diverse inizializzazioni 
+- Analisi Exp5 e comportamento del rango
+- Aggiunta di Layer molto largo L per rendere i dati linearmente separabili in partenza (Forse)
