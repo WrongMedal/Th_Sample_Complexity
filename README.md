@@ -1,4 +1,4 @@
-# Tesi sample complexity WiP
+# Materiale Tesi "Analisi della Sample Complexity in Reti Neurali Feedforward"
 
 Codice inerente al lavoro di tesi su sample complexity di tre FNN. <br>
 ⚠️ Tutto il materiale caricato è ancora un Work in Progress ⚠️
