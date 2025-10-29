@@ -3,35 +3,35 @@
 ### Dati rilevati - Rete A 
 | Size Hidden Layer | Parametri allenabili | Parametri NON allenabili |
 |-------------------|----------------------|---------------------------|
-| 8                 | 6480 — 6.5K          | 0                         |
-| 16                | 13216 — 13.2K        | 0                         |
-| 32                | 27456 — 27.5K        | 0                         |
-| 64                | 59008 — 59K          | 0                         |
-| 128               | 134400 — 134K        | 0                         |
-| 256               | 334336 — 334K        | 0                         |
-| 512               | 930816 — 931K        | 0                         |
+| 8                 | 6514 — 6.5K          | 0                         |
+| 16                | 13274 — 13.3K        | 0                         |
+| 32                | 27562 — 27.5K        | 0                         |
+| 64                | 59210 — 59K          | 0                         |
+| 128               | 134794 — 135K        | 0                         |
+| 256               | 335114 — 335K        | 0                         |
+| 512               | 932362 — 932K        | 0                         |
 
 ### Dati rilevati - Rete B
 | Size Hidden Layer | Parametri allenabili | Parametri NON allenabili |
 |-------------------|----------------------|---------------------------|
-| 8                 | 272 — 0.3K           | 6272 — 6.3K               |
-| 16                | 928 — 0.9K           | 12544 — 12.5K             |
-| 32                | 3392 — 3.4K          | 25088 — 25K               |
-| 64                | 12928 — 13K          | 50176 — 50K               |
-| 128               | 50432 — 50K          | 100352 — 100K             |
-| 256               | 199168 — 200K        | 200704 — 200K             |
-| 512               | 791552 — 792K        | 401408 — 401K             |
+| 8                 | 314 — 0.3K           | 6272 — 6.3K               |
+| 16                | 1002 — 1K            | 12544 — 12.5K             |
+| 32                | 3530 — 3.5K          | 25088 — 25K               |
+| 64                | 13194 — 13K          | 50176 — 50K               |
+| 128               | 50954 — 51K          | 100352 — 100K             |
+| 256               | 200202 — 200K        | 200704 — 201K             |
+| 512               | 793610 — 794K        | 401408 — 401K             |
 
 ### Dati rilevati - Rete C
 | Size Hidden Layer | Parametri allenabili | Parametri NON allenabili |
 |-------------------|----------------------|---------------------------|
-| 8                 | 6544 — 6.5K          | 0                         |
-| 16                | 13472 — 13.5K        | 0                         |
-| 32                | 28480 — 28K          | 0                         |
-| 64                | 63104 — 63K          | 0                         |
-| 128               | 150784 — 151K        | 0                         |
-| 256               | 399872 — 400K        | 0                         |
-| 512               | 1192960 — 1.2M       | 0                         |
+| 8                 | 6586 — 6.6K          | 0                         |
+| 16                | 13546 — 13.5K        | 0                         |
+| 32                | 28618 — 29K          | 0                         |
+| 64                | 63370 — 63K          | 0                         |
+| 128               | 151306 — 151K        | 0                         |
+| 256               | 400906 — 401K        | 0                         |
+| 512               | 1195018 — 1.2M       | 0                         |
 
 
 ## Osservazioni
@@ -83,20 +83,23 @@ La VC-dimension è **proporzionale al numero di archi**, con una costante moltip
 
 Confrontando l'andamento del numero di parametri addestrabili:
 
-| Layers | Parametri addestrabili (B) | Parametri non addestrabili (B) | % addestrabili su tot (B) | Parametri addestrabili (A) | Differenza A - B |
-|--------|-----------------------------|----------------------------------|----------------------------|------------------------------|------------------|
-| 8      | 272                         | 6272                             | 4,16%                      | 6480                         | 6208             |
-| 16     | 928                         | 12544                            | 6,89%                      | 13216                        | 12288            |
-| 32     | 3392                        | 25088                            | 11,91%                     | 27456                        | 24064            |
-| 64     | 12928                       | 50176                            | 20,49%                     | 59008                        | 46080            |
-| 128    | 50432                       | 100352                           | 33,45%                     | 134400                       | 83968            |
-| 256    | 199168                      | 200704                           | 49,81%                     | 334336                       | 135168           |
-| 512    | 791552                      | 401408                           | 66,35%                     | 930816                       | 139264           |
-| **1024** | **3155968**               | **802816**                       | **79,72%**                 | **2910208**                  | **-245760**      |
+
+|   Layers | Parametri addestrabili (B) | Parametri non addestrabili (B) | % addestrabili su tot (B) | Parametri addestrabili (A) | **Differenza A - B (addestrabili)** |
+| -------: | -------------------------: | -----------------------------: | ------------------------: | -------------------------: | --------------------------: |
+|        8 |                        314 |                           6272 |                    4.77 % |                       6514 |                        6200 |
+|       16 |                       1002 |                          12544 |                    7.40 % |                      13274 |                       12272 |
+|       32 |                       3530 |                          25088 |                   12.33 % |                      27562 |                       24032 |
+|       64 |                      13194 |                          50176 |                   20.83 % |                      59210 |                       46016 |
+|      128 |                      50954 |                         100352 |                   33.67 % |                     134794 |                       83840 |
+|      256 |                     200202 |                         200704 |                   49.95 % |                     335114 |                      134912 |
+|      512 |                     793610 |                         401408 |                   66.44 % |                     932362 |                      138752 |
+|     1024 |                **3160074** |                     **802816** |                   79.74 % |                    2913290 |                    - 246784 |
+
+
 
 si nota una correlazione tra l'aumento dei pesi allenabili di B e la crescita dell'accuracy.
 
-Inoltre possiamo osservare che nel caso layer_512 le performance sono molto simili nonostante la differenza del numero di parametri sia sostanziale tra le reti A e B, le performance sono molto simili. 
+Inoltre possiamo osservare che nel caso layer_512 le performance sono molto simili nonostante la differenza del numero di parametri sia sostanziale tra le reti A e B. 
 
 ![Exp3  Rete A Accuracy/Loss on sample_size](https://github.com/WrongMedal/Th_Sample_Complexity/blob/main/Grafici_risultati/Exp3_ReteA_Accuracy_Loss.png)
 
@@ -116,7 +119,7 @@ Vi sono già degli approcci e misure che tengono in conto della prima ipotesi ne
 
 Invece la seconda ipotesi è sostenuta, parzialmente, da prove empiriche ed euristiche circa l'inizializzazione dei pesi (v. cap. 8 di Deep Learning - Ian Goodfellow et al.). In questo senso è allora interessante provare altre inizializzazioni senza prevedere addestramento.
 
-La mia intuizione è che entrambe siano valide, che tutti questi i fattori concorrano (magari in misura diversa) a modificare l'espressività e quindi la sample complexity di una classe.
+La mia intuizione è che entrambe siano valide, che tutti questi fattori concorrano (magari in misura diversa) a modificare l'espressività e quindi la sample complexity di una classe.
 
 ----------------------------------------------------------------------
 
