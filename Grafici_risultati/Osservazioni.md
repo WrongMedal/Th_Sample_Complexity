@@ -105,6 +105,8 @@ Inoltre possiamo osservare che nel caso layer_512 le performance sono molto simi
 
 ![Exp3 Rete B Accuracy/Loss on sample_size](https://github.com/WrongMedal/Th_Sample_Complexity/blob/main/Grafici_risultati/Exp3_ReteB_Accuracy_Loss.png)
 
+![Exp3 Rete C Accuracy/Loss on sample_size](https://github.com/WrongMedal/Th_Sample_Complexity/blob/main/Grafici_risultati/Exp3_ReteC_Accuracy_Loss.png)
+
 Date le precedenti considerazioni si possono formulare queste ipotesi:
 * l'accuracy è ormai alta, potremmo star andando incontro a saturazione: l'espressività di una rete è più influenzata dalla quantità di informazioni dello specifico dataset piuttosto che dalla sua architettura.
 * le due perfomance si avvicinano grazie al contributo dei pesi non addestrabili di B.
