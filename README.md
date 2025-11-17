@@ -4,6 +4,9 @@ Codice inerente al lavoro di tesi su sample complexity di tre FNN. <br>
 ⚠️ Tutto il materiale caricato è ancora un Work in Progress ⚠️
 
 ### News
+_17 novembre_ <br>
+Disponibili grafici 3D interattivi di Accuracy / Sample complexity / Epochs per Exp5 --> [link](https://wrongmedal.github.io/Th_Sample_Complexity/)
+
 _25 luglio_ <br>
 Introduzione grafici e CSV Esperimento 5 (early stopping). <br>
 Caricati CSV, per ogni esperimento, che analizzano il rango delle matrici dei layer delle varie reti.
