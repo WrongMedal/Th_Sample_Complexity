@@ -3,6 +3,9 @@
 Codice inerente al lavoro di tesi su sample complexity di tre FNN. <br>
 
 ### News
+📢 _24 dicembre_ 📢 <br>
+Disponibile integralmente la [tesi](https://github.com/WrongMedal/Th_Sample_Complexity/blob/main/Tesi.pdf) realizzata tramite gli esperimenti presenti in questa repo.
+
 _17 novembre_ <br>
 Disponibili grafici 3D interattivi di Accuracy / Sample complexity / Epochs per Exp5 --> [link](https://wrongmedal.github.io/Th_Sample_Complexity/)
 
